@@ -1,4 +1,4 @@
-@import "normalize";
+//@import "normalize";
 
 // ---------------------------------------------------------
 // @Resets
@@ -11,11 +11,24 @@
 }
 
 body, html {
-  color: colors('dark-color');
+  color: colors('dark');
   font-family: "PoppinsRegular", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
   padding: 0;
   position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: colors('dark');
+}
+
+
+.wrapper {
+  height: 100vh;
+  margin: 0 1.875rem;
+
+
 }

@@ -2,13 +2,15 @@
 // @Colors
 // -------------------------------------------
 $default-colors: (
-        light: #f7f8ff,
-        white-color: #fff,
-        dark-color: #212529,
+        light-grey: #f9f9f9,
+        light: #fff,
+        dark: #222,
         grey-color: #bfbfbf,
         twitter: #00acee,
         google: #db4437,
         facebook: #4267b2,
+        mainTheme: #222,
+        mainThemeII: #7d979e,
 );
 
 //-------------------------------------------
@@ -24,5 +26,5 @@ $breakpoint-xl: 1200px;
 // @Variables Definitions
 // -------------------------------------------
 
-$header-height: 4.375rem;
+$header-height: 5rem;
 $footer-height: 1.875rem;
