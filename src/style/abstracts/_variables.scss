@@ -1,0 +1,28 @@
+//-------------------------------------------
+// @Colors
+// -------------------------------------------
+$default-colors: (
+        light: #f7f8ff,
+        white-color: #fff,
+        dark-color: #212529,
+        grey-color: #bfbfbf,
+        twitter: #00acee,
+        google: #db4437,
+        facebook: #4267b2,
+);
+
+//-------------------------------------------
+// @BreakPoints
+// -------------------------------------------
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+//-------------------------------------------
+// @Variables Definitions
+// -------------------------------------------
+
+$header-height: 4.375rem;
+$footer-height: 1.875rem;

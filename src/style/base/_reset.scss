@@ -1,0 +1,21 @@
+@import "normalize";
+
+// ---------------------------------------------------------
+// @Resets
+// ---------------------------------------------------------
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, html {
+  color: colors('dark-color');
+  font-family: "PoppinsRegular", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
