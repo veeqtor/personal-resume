@@ -13,17 +13,17 @@
 // ---------------------------------------------------------
 
 @mixin transition($time) {
-  -moz-transition:all #{$time} ease-in-out;
-  -o-transition:all #{$time} ease-in-out;
-  -webkit-transition:all #{$time} ease-in-out;
-  transition:all #{$time} ease-in-out;
+  -moz-transition: all #{$time} ease-in-out;
+  -o-transition: all #{$time} ease-in-out;
+  -webkit-transition: all #{$time} ease-in-out;
+  transition: all #{$time} ease-in-out;
 
 }
 
 @mixin center {
-  align-items:center;
-  display:flex;
-  justify-content:center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -40,10 +40,10 @@
 
 @mixin mediaQuery($condition) {
   @media #{$condition}
-{
-  @content;
+  {
+    @content;
 
-}
+  }
 }
 
 // ---------------------------------------------------------
@@ -54,11 +54,10 @@
 // and all devices above it.
 
 @mixin from($breakpoint) {
-  @media screen and (min-width: $breakpoint)
-{
-  @content;
+  @media screen and (min-width: $breakpoint) {
+    @content;
 
-}
+  }
 }
 
 // ---------------------------------------------------------
@@ -68,11 +67,10 @@
 // ---------------------------------------------------------
 
 @mixin to($breakpoint) {
-  @media screen and (max-width: $breakpoint - 1px)
-{
-  @content;
+  @media screen and (max-width: $breakpoint - 1px) {
+    @content;
 
-}
+  }
 }
 
 // ---------------------------------------------------------
@@ -81,9 +79,25 @@
 // Mixin used to match the devices between 2 breakpoints.
 // ---------------------------------------------------------
 @mixin between($start, $end) {
-  @media screen and (min-width: $start) and (max-width: $end - 1px)
-{
-  @content;
+  @media screen and (min-width: $start) and (max-width: $end - 1px) {
+    @content;
 
+  }
 }
+
+
+// ---------------------------------------------------------
+// @Animations
+// ---------------------------------------------------------
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

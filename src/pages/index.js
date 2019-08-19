@@ -5,14 +5,13 @@ import SEO from "../components/seo"
 import Navigation from "../components/common/navigation"
 import Footer from "../components/common/footer"
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
     <>
-      <Navigation/>
+      <SEO title='Home'/>
+      <Navigation indexProps={props}/>
       <Layout>
-        <SEO title="Home"/>
-        <h1>Hi people</h1>
-        <p>Welcome to your new my new site.</p>
+        <p>Home</p>
       </Layout>
       <Footer/>
     </>

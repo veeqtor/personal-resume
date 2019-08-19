@@ -1,5 +1,148 @@
 #navigation {
-  p {
-    letter-spacing: 20px;
+  background: colors('light');
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.875rem;
+    min-height: $header-height;
+
+    @include to($breakpoint-lg) {
+      margin: 0 0.9375rem;
+    }
+
+    .logo {
+      text-transform: uppercase;
+
+      a {
+        align-items: center;
+        display: flex;
+        font-family: "PoppinsLight", "Helvetica Neue", sans-serif;
+        font-size: 0.875rem;
+        letter-spacing: 0.125rem;
+
+        span {
+          padding-left: 0.875rem;
+
+          @include to($breakpoint-lg) {
+            display: none
+          }
+        }
+
+        img {
+          height: auto;
+          width: 2.188rem;
+        }
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 40%;
+
+      @include to($breakpoint-xl) {
+        width: 60%;
+      }
+
+      @include to($breakpoint-lg) {
+        align-items: flex-start;
+        background: colors('light');
+        box-shadow: 0.25rem 0.25rem 0.625rem lighten(colors('dark'), 80%);
+        flex-direction: column;
+        left: -100%;
+        min-height: calc(50vh - #{$header-height});
+        position: absolute;
+        top: $header-height;
+        width: 30%;
+
+        @include transition(300ms);
+
+        &--open {
+          left: 0;
+        }
+      }
+
+      li {
+        cursor: pointer;
+        font-size: 0.875rem;
+        margin: 0 1rem;
+        position: relative;
+        text-transform: uppercase;
+
+
+        @include to($breakpoint-lg) {
+          font-size: 0.775rem;
+          opacity: 0;
+        }
+
+        span::before {
+          border-bottom: 0.1875rem solid colors('mainTheme');
+          content: '';
+          height: 1.563rem;
+          position: absolute;
+          width: 0;
+
+          @include transition(300ms)
+        }
+
+        span:hover::before {
+          width: 120%;
+        }
+
+        .active::before {
+          border-bottom: 0.1875rem solid colors('mainTheme');
+          content: '';
+          height: 1.563rem;
+          position: absolute;
+          width: 120%;
+
+          @include transition(300ms)
+        }
+      }
+    }
+
+    .mobile-btn {
+      cursor: pointer;
+      display: none;
+
+      span {
+        background-color: colors('dark');
+        display: block;
+        height: 0.1875rem;
+        margin: 0.3125rem;
+        width: 1.563rem;
+
+        @include transition(300ms)
+
+      }
+
+      @include to($breakpoint-lg) {
+        display: block;
+      }
+    }
+
+    .mobile-btn.toggled {
+      span:first-child {
+        transform: rotate(-45deg) translate(-0.3125rem, 0.375rem);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:last-child {
+        transform: rotate(45deg) translate(-0.3125rem, -0.375rem);
+      }
+    }
+
   }
 }
