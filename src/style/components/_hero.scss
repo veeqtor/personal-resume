@@ -1,0 +1,112 @@
+#hero {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+
+  @include to($breakpoint-lg) {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4rem;
+    text-align: center;
+  }
+
+  .head-shot {
+    margin: 15px;
+
+    &-img {
+      border-radius: 100%;
+    }
+
+  }
+
+  .description {
+    margin: 15px;
+
+    @include to($breakpoint-lg) {
+      margin: unset;
+    }
+
+    p, h1, h3 {
+      margin: 0;
+    }
+
+    &-intro {
+      font-family: "PoppinsLight", sans-serif;
+    }
+
+    &-name {
+      font-family: "PoppinsBlack", sans-serif;
+      font-size: 250%;
+    }
+
+    &-title {
+      background: colors('dark');
+      border-radius: 3px;
+      color: colors('light');
+      display: inline;
+      font-family: "PoppinsBold", sans-serif;
+      font-size: 150%;
+      letter-spacing: 5px;
+      padding: 5px 15px;
+
+      @include to($breakpoint-lg) {
+        background: unset;
+        color: colors('dark');
+        letter-spacing: 3px;
+        padding: unset;
+        white-space: nowrap;
+      }
+    }
+
+    &-location {
+      padding: 15px 0;
+    }
+  }
+
+  .social-media-icons {
+    a {
+      font-family: "PoppinsBlack", sans-serif;
+      padding-right: 15px;
+
+      svg {
+        @include transition(300ms);
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+
+      .facebook {
+        &:hover {
+          svg {
+            color: colors('facebook');
+          }
+        }
+      }
+
+      .twitter {
+        &:hover {
+          svg {
+            color: colors('twitter');
+          }
+        }
+      }
+
+      .linkedIn {
+        &:hover {
+          svg {
+            color: colors('linkedIn');
+          }
+        }
+      }
+
+      .github {
+        &:hover {
+          svg {
+            color: colors('github');
+          }
+        }
+      }
+    }
+  }
+}
