@@ -4,19 +4,30 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navigation from "../components/common/navigation"
 import Footer from "../components/common/footer"
+import HeroSection from "../components/heroSection"
+import { graphql } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
     <>
-      <Navigation/>
+      <SEO title='Home'/>
+      <Navigation indexProps={props}/>
       <Layout>
-        <SEO title="Home"/>
-        <h1>Hi people</h1>
-        <p>Welcome to your new my new site.</p>
+        <HeroSection dataProps={props}/>
       </Layout>
       <Footer/>
     </>
   )
 }
+
+export const query = graphql`{
+  portrait: file(relativePath: {eq: "portrait.png"}) {
+    childImageSharp {
+      fixed(width: 200, height: 200, fit: COVER, cropFocus: NORTH) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+}`;
 
 export default IndexPage
