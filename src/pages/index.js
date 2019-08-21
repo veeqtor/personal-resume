@@ -1,11 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navigation from "../components/common/navigation"
 import Footer from "../components/common/footer"
 import HeroSection from "../components/heroSection"
-import { graphql } from "gatsby"
+import AboutSection from "../components/about"
 
 const IndexPage = (props) => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = (props) => {
       <Navigation indexProps={props}/>
       <Layout>
         <HeroSection dataProps={props}/>
+        <AboutSection dataProps={props}/>
       </Layout>
       <Footer/>
     </>
@@ -21,9 +23,16 @@ const IndexPage = (props) => {
 }
 
 export const query = graphql`{
-  portrait: file(relativePath: {eq: "portrait.png"}) {
+  heroPortrait: file(relativePath: {eq: "portrait.png"}) {
     childImageSharp {
       fixed(width: 200, height: 200, fit: COVER, cropFocus: NORTH) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+  aboutPortrait: file(relativePath: {eq: "about.png"}) {
+    childImageSharp {
+      fixed(height: 500, grayscale: true) {
         ...GatsbyImageSharpFixed
       }
     }
