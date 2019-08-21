@@ -1,0 +1,68 @@
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 50vh;
+  width: 100%;
+
+  @include to($breakpoint-lg) {
+    grid-template-columns: 1fr;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .about {
+    &-description {
+      align-self: center;
+      grid-column: 1/2;
+      padding-left: 5rem;
+      padding-right: 2rem;
+
+      @include to($breakpoint-lg) {
+        padding: 0 2rem;
+      }
+
+      h3 {
+        font-family: "PoppinsBlack", "Helvetica Neue", sans-serif;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+
+      &-framework-icons {
+        a {
+          padding-right: 0.5125rem;
+        }
+      }
+
+      > a {
+        align-items: center;
+        background: colors('dark');
+        border-radius: 3px;
+        color: colors('light');
+        display: inline-flex;
+        margin-top: 1rem;
+        padding: 0.3125rem 1rem;
+        text-transform: uppercase;
+
+        span {
+          align-items: center;
+          display: flex;
+        }
+
+        &:hover {
+          background: colors('github');
+        }
+      }
+
+    }
+
+    &-image {
+      grid-column: 2/3;
+      height: 50vh;
+      overflow-y: hidden;
+
+      &-portrait {
+        width: 100% !important;
+      }
+    }
+  }
+}
