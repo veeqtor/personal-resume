@@ -11,7 +11,7 @@
   }
 
   .head-shot {
-    margin: 15px;
+    margin: 0.9375rem;
 
     &-img {
       border-radius: 100%;
@@ -20,7 +20,7 @@
   }
 
   .description {
-    margin: 15px;
+    margin: 0.9375rem;
 
     @include to($breakpoint-lg) {
       margin: unset;
@@ -37,36 +37,40 @@
     &-name {
       font-family: "PoppinsBlack", sans-serif;
       font-size: 250%;
+
+      @include to($breakpoint-lg) {
+        line-height: 2.188rem;
+      }
     }
 
     &-title {
       background: colors('dark');
-      border-radius: 3px;
+      border-radius: 0.1875rem;
       color: colors('light');
       display: inline;
       font-family: "PoppinsBold", sans-serif;
       font-size: 150%;
-      letter-spacing: 5px;
-      padding: 5px 15px;
+      letter-spacing: 0.3125rem;
+      padding: 0.3125rem 0.9375rem;
 
       @include to($breakpoint-lg) {
         background: unset;
         color: colors('dark');
-        letter-spacing: 3px;
+        letter-spacing: unset;
         padding: unset;
         white-space: nowrap;
       }
     }
 
     &-location {
-      padding: 15px 0;
+      padding: 0.9375rem 0;
     }
   }
 
   .social-media-icons {
     a {
       font-family: "PoppinsBlack", sans-serif;
-      padding-right: 15px;
+      padding-right: 0.9375rem;
 
       svg {
         @include transition(300ms);
