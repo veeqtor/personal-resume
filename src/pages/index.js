@@ -7,6 +7,7 @@ import Navigation from "../components/common/navigation"
 import Footer from "../components/common/footer"
 import HeroSection from "../components/heroSection"
 import AboutSection from "../components/about"
+import Skills from "../components/skills"
 
 const IndexPage = (props) => {
   return (
@@ -14,8 +15,9 @@ const IndexPage = (props) => {
       <SEO title='Home'/>
       <Navigation indexProps={props}/>
       <Layout>
-        <HeroSection dataProps={props}/>
-        <AboutSection dataProps={props}/>
+        <HeroSection heroPortrait={props.data.heroPortrait}/>
+        <AboutSection aboutPortrait={props.data.aboutPortrait}/>
+        <Skills />
       </Layout>
       <Footer/>
     </>

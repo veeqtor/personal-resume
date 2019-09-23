@@ -1,0 +1,49 @@
+#skills {
+  background: colors('dark');
+  color: colors('light');
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 50vh;
+  padding: 1rem 5rem 1.875rem 5rem;
+
+  @include to($breakpoint-lg) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "PoppinsBlack", "Helvetica Neue", sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .soft {
+    grid-column: 1/2;
+  }
+
+  .tech {
+  }
+}
+
+#skill-bar {
+  .bar-wrapper {
+    padding: 0 1rem 0 0;
+    width: 100%;
+
+    @include to($breakpoint-lg) {
+      padding: 0.3125rem;
+    }
+
+    span.bar {
+      align-items: center;
+      background: colors('light');
+      border-radius: 5px;
+      color: colors("dark");
+      display: flex;
+      font-family: "PoppinsBlack", "Helvetica Neue", sans-serif;
+      font-size: 80%;
+      height: 1rem;
+      justify-content: center;
+    }
+  }
+}
