@@ -3,9 +3,9 @@ import BackgroundImageSection from "./backgroundImage"
 import Hero from "./hero"
 
 
-const HeroSection = ({dataProps}) => (
+const HeroSection = ({ heroPortrait }) => (
   <BackgroundImageSection id='bg-section' className='bg-image'>
-    <Hero data={dataProps}/>
+    <Hero heroPortrait={heroPortrait}/>
   </BackgroundImageSection>
 )
 
