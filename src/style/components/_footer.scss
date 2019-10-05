@@ -1,3 +1,86 @@
-#footer {
+#contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  position: relative;
+  width: 100%;
 
+  .footer {
+    &-header {
+      font-family: "PoppinsBlack", "Helvetica Neue", sans-serif;
+      letter-spacing: 0.3125rem;
+      text-transform: uppercase;
+    }
+
+    &-contacts {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          padding: 0 1rem;
+
+          a {
+            font-family: "PoppinsBlack", "Helvetica Neue", sans-serif;
+            text-transform: uppercase;
+
+            @include transition(300ms);
+
+            &:hover {
+              color: lighten(colors('dark'), 20%);
+            }
+
+            &::after {
+              border-radius: 50%;
+              content: ' ';
+              display: inline-flex;
+              height: 0.5rem;
+              margin-left: 0.575rem;
+              width: 0.5rem;
+
+              @include transition(300ms);
+            }
+
+            &.tw::after {
+              background: colors('twitter');
+            }
+
+            &.in::after {
+              background: colors('linkedIn');
+            }
+
+            &.fb::after {
+              background: colors('facebook');
+            }
+
+            &.mail::after {
+              background: colors('google');
+            }
+          }
+        }
+      }
+    }
+
+    &-sub {
+      background: colors('dark');
+      bottom: 0;
+      color: colors('light');
+      padding: 0 5rem;
+      position: absolute;
+      text-align: right;
+      width: 100%;
+
+      @include to($breakpoint-lg) {
+        text-align: center;
+      }
+
+      span {
+        font-size: x-small;
+      }
+    }
+  }
 }
+
