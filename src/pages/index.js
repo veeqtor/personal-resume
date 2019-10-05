@@ -8,6 +8,7 @@ import Footer from "../components/common/footer"
 import HeroSection from "../components/heroSection"
 import AboutSection from "../components/about"
 import Skills from "../components/skills"
+import MyStory from "../components/myStory"
 
 const IndexPage = (props) => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = (props) => {
         <HeroSection heroPortrait={props.data.heroPortrait}/>
         <AboutSection aboutPortrait={props.data.aboutPortrait}/>
         <Skills />
+        <MyStory />
       </Layout>
       <Footer/>
     </>
@@ -32,7 +34,7 @@ export const query = graphql`{
       }
     }
   }
-  aboutPortrait: file(relativePath: {eq: "about.png"}) {
+  aboutPortrait: file(relativePath: {eq: "aboutQuote.jpg"}) {
     childImageSharp {
       fixed(height: 500, grayscale: true) {
         ...GatsbyImageSharpFixed

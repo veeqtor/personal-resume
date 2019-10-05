@@ -6,8 +6,8 @@ class Skills extends PureComponent {
   render() {
     return (
       <div id='skills'>
+        <h3>skills</h3>
         <div className="soft">
-          <h2>Soft skills</h2>
           {data.softSkills.map((skill, index) =>
             <SkillBar key={`skill.subject` + index} subject={skill.subject}
                       mark={`${skill.mark}%`}
@@ -15,7 +15,6 @@ class Skills extends PureComponent {
         </div>
 
         <div className="tech">
-          <h2>Tech skills</h2>
           {data.technicalSkills.map((skill, index) =>
             <SkillBar key={`skill.subject` + index} subject={skill.subject}
                       mark={`${skill.mark}%`}
