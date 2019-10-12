@@ -70,12 +70,8 @@
       color: colors('light');
       padding: 0 5rem;
       position: absolute;
-      text-align: right;
+      text-align: center;
       width: 100%;
-
-      @include to($breakpoint-lg) {
-        text-align: center;
-      }
 
       span {
         font-size: x-small;

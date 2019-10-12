@@ -3,9 +3,12 @@ import data from "../../data/siteData"
 
 const Footer = () => {
   return (
-    <footer id="contact" className="footer">
+    <footer id="contact">
       <h3 className="footer-header">Get in touch</h3>
-      <div className="footer-contacts">
+      <div className="footer-contacts wow fadeInUp"
+           data-wow-duration="2s"
+           data-wow-offset="50"
+      >
         <ul>
           <li><a href={data.userInfo.socialMediaLinks.twitter}
                  target='_blank' rel="noopener noreferrer"
@@ -21,7 +24,8 @@ const Footer = () => {
                  className='mail'>EMAIL</a></li>
         </ul>
       </div>
-      <div className="footer-sub">
+      <div className="footer-sub wow fadeInUp"
+           data-wow-duration="2s">
         <span>&copy; {new Date().getFullYear()}, Victor Nwokeocha</span>
       </div>
     </footer>
