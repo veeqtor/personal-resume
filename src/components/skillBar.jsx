@@ -3,8 +3,14 @@ import React from "react"
 const SkillBar = ({ subject, mark, fullMark }) => (
   <div id='skill-bar'>
     <div className="bar-wrapper">
-      <p>{subject}</p>
-      <span className="bar"
+      <p
+        className="bar wow fadeIn"
+        data-wow-duration="2s"
+        data-wow-offset="100"
+      >{subject}</p>
+      <span className="bar wow slideInLeft"
+            data-wow-duration="2s"
+            data-wow-offset="100"
             style={
               {
                 width: `${mark}`,

@@ -28,6 +28,7 @@
 
 #skill-bar {
   .bar-wrapper {
+    overflow-x: hidden;
     padding: 0 1rem 0 0;
     width: 100%;
 
@@ -38,7 +39,7 @@
     span.bar {
       align-items: center;
       background: colors('light');
-      border-radius: 5px;
+      border-radius: 3px;
       color: colors("dark");
       display: flex;
       font-family: "PoppinsBlack", "Helvetica Neue", sans-serif;
