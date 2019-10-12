@@ -1,10 +1,10 @@
 #experience {
   background: colors('grey-color');
   min-height: 70vh;
-  padding: 1rem 5rem 1.875rem 5rem;
+  padding: $header-height;
 
   @include to($breakpoint-lg) {
-    padding: 1rem 2rem;
+    padding: $header-height 2rem;
   }
 
   h3 {
@@ -159,9 +159,10 @@
           justify-content: space-between;
         }
 
-        p {
+        span {
+          display: block;
           margin: 0.3125rem 0 0;
-          font-size: 11px;
+          font-size: 12px;
           font-family: "PoppinsLight", "Helvetica Neue", sans-serif;
           text-align: left;
           background: colors('light');
@@ -213,17 +214,19 @@
       border-radius: 50%;
       color: colors('light');
       display: flex;
-      height: 30px;
+      height: 35px;
       justify-content: center;
       position: absolute;
       top: 0;
-      width: 30px;
+      width: 35px;
 
 
       span {
         font-family: "PoppinsSemiBold", "Helvetica Neue", sans-serif;
         text-transform: uppercase;
         z-index: 1002;
+        height: 1em;
+        width: 1em;
       }
     }
   }

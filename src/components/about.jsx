@@ -14,7 +14,10 @@ import data from "../data/siteData"
 const AboutSection = ({ aboutPortrait }) => {
   return (
     <div id='about'>
-      <div className='about-description'>
+      <div className='about-description wow fadeIn'
+           data-wow-duration="2s"
+           data-wow-offset="100"
+      >
         <h3>About Me</h3>
         <p>{data.userInfo.description}</p>
         <div className='about-description-framework-icons'>
@@ -50,7 +53,10 @@ const AboutSection = ({ aboutPortrait }) => {
           <span><FaGithub/></span>
           <span>&nbsp;Github Resume</span></a>
       </div>
-      <div className='about-image'>
+      <div className='about-image wow fadeInRight'
+           data-wow-duration="2s"
+           data-wow-offset="100"
+      >
         <Img fixed={aboutPortrait.childImageSharp.fixed}
              className='about-image-portrait'/>
       </div>

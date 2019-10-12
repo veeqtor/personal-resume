@@ -36,7 +36,7 @@ export const query = graphql`{
   }
   aboutPortrait: file(relativePath: {eq: "aboutQuote.jpg"}) {
     childImageSharp {
-      fixed(height: 500, grayscale: true) {
+      fixed(height: 600, grayscale: true) {
         ...GatsbyImageSharpFixed
       }
     }
