@@ -1,10 +1,10 @@
 const data = {
   brand: "victor nwokeocha",
   navLinks: [{
-    name: "About",
+    name: "About me",
     path: "#about",
   }, {
-    name: "Experience",
+    name: "My Story",
     path: "#experience",
   }, {
     name: "Skills",
@@ -17,7 +17,9 @@ const data = {
     name: "Victor nwokeocha",
     title: "Software engineer",
     location: "Lagos, Nigeria",
-    description: "Victor is a technology enthusiast, passionate about learning the trends the tech world is taking so that he can build better, fast and efficient tools to help solve problems now, or in the future.",
+    description: "I am is a technology enthusiast, passionate about learning " +
+      "the trends the tech world is taking so that I can build better, " +
+      "fast and efficient tools to help solve problems now, or in the future.",
     gitResume: "https://resume.github.io/?veeqtor",
     email: "nwokeochavictor@gmail.com",
     socialMediaLinks: {

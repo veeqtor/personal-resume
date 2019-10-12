@@ -5,15 +5,16 @@ import data from "../data/siteData"
 
 const HeroSection = ({ heroPortrait }) => (
   <div id='hero'>
-    <div className='head-shot'>
+    <div className='head-shot wow fadeInDown delay-1s'
+         data-wow-duration="2s">
       <Img fixed={heroPortrait.childImageSharp.fixed} className='head-shot-img'/>
     </div>
     <div className='description'>
-      <p className='description-intro'>Hello, I'm</p>
-      <h1 className='description-name'>{data.userInfo.name}</h1>
-      <h3 className='description-title'>{data.userInfo.title}</h3>
-      <p className='description-location'>{data.userInfo.location}</p>
-      <div className='social-media-icons'>
+      <p className='description-intro wow fadeInDown delay-1s'>Hello, I'm</p>
+      <h1 className='description-name wow fadeInRight delay-1s'>{data.userInfo.name}</h1>
+      <h3 className='description-title wow fadeInRight delay-2s'>{data.userInfo.title}</h3>
+      <p className='description-location wow fadeInUp delay-2s'>{data.userInfo.location}</p>
+      <div className='social-media-icons wow fadeInRight delay-2s'>
         <a href={data.userInfo.socialMediaLinks.facebook} target='_blank' rel="noopener noreferrer">
           <span className='facebook'><FaFacebookF/></span>
         </a>

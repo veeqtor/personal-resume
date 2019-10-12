@@ -72,6 +72,10 @@
       font-family: "PoppinsBlack", sans-serif;
       padding-right: 0.9375rem;
 
+      &:last-child {
+        padding-right: 0;
+      }
+
       svg {
         @include transition(300ms);
 

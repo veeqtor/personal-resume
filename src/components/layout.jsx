@@ -7,10 +7,18 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
 import "../style/main.scss"
 
 const Layout = ({ children }) => {
+  if (typeof window !== "undefined") {
+    const WOW = require('wow.js')
+
+    const wow = new WOW({
+      mobile: false,
+    })
+    wow.init()
+  }
+
   return (
     <>
       <main id="layout">{children}</main>
