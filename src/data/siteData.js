@@ -4,11 +4,11 @@ const data = {
     name: "About me",
     path: "#about",
   }, {
-    name: "My Story",
-    path: "#experience",
-  }, {
     name: "Skills",
     path: "#skills",
+  }, {
+    name: "My Story",
+    path: "#experience",
   }, {
     name: "Contact",
     path: "#contact",

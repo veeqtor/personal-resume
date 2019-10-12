@@ -10,18 +10,14 @@ class Skills extends PureComponent {
             data-wow-duration="2s"
             data-wow-offset="100"
         >skills</h3>
-        <div className="soft wow fadeInUp"
-             data-wow-duration="1s"
-             data-wow-offset="50">
+        <div className="soft">
           {data.softSkills.map((skill, index) =>
             <SkillBar key={`skill.subject` + index} subject={skill.subject}
                       mark={`${skill.mark}%`}
                       fullMark={skill.fullMark}/>)}
         </div>
 
-        <div className="tech wow fadeInUp"
-             data-wow-duration="2s"
-             data-wow-offset="50">
+        <div className="tech">
           {data.technicalSkills.map((skill, index) =>
             <SkillBar key={`skill.subject` + index} subject={skill.subject}
                       mark={`${skill.mark}%`}

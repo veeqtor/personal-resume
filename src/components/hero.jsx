@@ -14,7 +14,7 @@ const HeroSection = ({ heroPortrait }) => (
       <h1 className='description-name wow fadeInRight delay-1s'>{data.userInfo.name}</h1>
       <h3 className='description-title wow fadeInRight delay-2s'>{data.userInfo.title}</h3>
       <p className='description-location wow fadeInUp delay-2s'>{data.userInfo.location}</p>
-      <div className='social-media-icons wow fadeInRight delay-2s'>
+      <div className='social-media-icons wow fadeInUp delay-2s'>
         <a href={data.userInfo.socialMediaLinks.facebook} target='_blank' rel="noopener noreferrer">
           <span className='facebook'><FaFacebookF/></span>
         </a>
