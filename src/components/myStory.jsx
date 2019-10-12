@@ -8,7 +8,10 @@ class MyStory extends PureComponent {
   render() {
     return (
       <div id='experience'>
-        <h3>My Story</h3>
+        <h3 className="wow fadeIn"
+            data-wow-duration="2s"
+            data-wow-offset="100"
+        >My Story</h3>
         <div className='timeline'>
           <div className='icon-space'>
             <div className='icon-inner'>
@@ -17,14 +20,17 @@ class MyStory extends PureComponent {
           </div>
           <ul>
             {data.academicHistory.map((entry, index) => (
-              <li key={`${entry.school + index}`}>
+              <li className="wow slideInRight"
+                  data-wow-duration="2s"
+                  data-wow-offset="200"
+                key={`${entry.school + index}`}>
                 <div className='content'>
                   <div className="time-title">
                     <h4>{entry.certification}</h4>
                     <h4>{entry.year}</h4>
                   </div>
                   <h5>{entry.school}</h5>
-                  {entry.descriptions !== null && <p>
+                  {entry.descriptions !== null && <span>
                     {entry.descriptions.length > 0 &&
                     <ul>
                       {
@@ -33,7 +39,7 @@ class MyStory extends PureComponent {
                         ))
                       }
                     </ul>}
-                  </p>}
+                  </span>}
                 </div>
               </li>
             ))}
@@ -47,7 +53,11 @@ class MyStory extends PureComponent {
           </div>
           <ul>
             {data.careerHistory.map((entry, index) => (
-              <li key={`${entry.company + index}`}>
+              <li
+                className="wow fadeInRightBig"
+                data-wow-duration="2s"
+                data-wow-offset="200"
+                key={`${entry.company + index}`}>
                 <div className='content'>
                   <div className="time-title">
                     <h3>{entry.title}</h3>
@@ -55,7 +65,7 @@ class MyStory extends PureComponent {
                   </div>
                   <h5>{entry.company}</h5>
                   <h5>{entry.location}</h5>
-                  {entry.descriptions !== null && <p>
+                  {entry.descriptions !== null && <span>
                     {entry.descriptions.length > 0 &&
                     <ul>
                       {
@@ -64,7 +74,7 @@ class MyStory extends PureComponent {
                         ))
                       }
                     </ul>}
-                  </p>}
+                  </span>}
                 </div>
               </li>
             ))}

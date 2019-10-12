@@ -1,7 +1,7 @@
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 50vh;
+  min-height: 70vh;
   width: 100%;
 
   @include to($breakpoint-lg) {
@@ -57,7 +57,7 @@
 
     &-image {
       grid-column: 2/3;
-      height: 50vh;
+      height: 70vh;
       overflow-y: hidden;
 
       &-portrait {

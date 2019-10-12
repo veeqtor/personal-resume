@@ -3,7 +3,9 @@ import data from "../../data/siteData"
 
 const Footer = () => {
   return (
-    <footer id="contact" className="footer">
+    <footer id="contact" className="footer wow fadeInUpBig"
+            data-wow-duration="2s"
+            data-wow-offset="50">
       <h3 className="footer-header">Get in touch</h3>
       <div className="footer-contacts">
         <ul>
