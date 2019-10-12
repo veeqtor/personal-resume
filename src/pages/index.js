@@ -27,7 +27,7 @@ const IndexPage = (props) => {
 }
 
 export const query = graphql`{
-  heroPortrait: file(relativePath: {eq: "portrait.png"}) {
+  heroPortrait: file(relativePath: {eq: "portrait.jpg"}) {
     childImageSharp {
       fixed(width: 200, height: 200, fit: COVER, cropFocus: NORTH) {
         ...GatsbyImageSharpFixed

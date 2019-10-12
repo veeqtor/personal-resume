@@ -4,11 +4,11 @@ const data = {
     name: "About me",
     path: "#about",
   }, {
-    name: "My Story",
-    path: "#experience",
-  }, {
     name: "Skills",
     path: "#skills",
+  }, {
+    name: "My Story",
+    path: "#experience",
   }, {
     name: "Contact",
     path: "#contact",
@@ -17,7 +17,7 @@ const data = {
     name: "Victor nwokeocha",
     title: "Software engineer",
     location: "Lagos, Nigeria",
-    description: "I am is a technology enthusiast, passionate about learning " +
+    description: "I am a technology enthusiast, passionate about learning " +
       "the trends the tech world is taking so that I can build better, " +
       "fast and efficient tools to help solve problems now, or in the future.",
     gitResume: "https://resume.github.io/?veeqtor",

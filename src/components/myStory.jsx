@@ -9,7 +9,7 @@ class MyStory extends PureComponent {
     return (
       <div id='experience'>
         <h3 className="wow fadeIn"
-            data-wow-duration="2s"
+            data-wow-duration="1s"
             data-wow-offset="100"
         >My Story</h3>
         <div className='timeline'>
@@ -22,7 +22,7 @@ class MyStory extends PureComponent {
             {data.academicHistory.map((entry, index) => (
               <li className="wow slideInUp"
                   data-wow-duration="2s"
-                  data-wow-offset="200"
+                  data-wow-offset="100"
                   key={`${entry.school + index}`}>
                 <div className='content'>
                   <div className="time-title">
@@ -56,7 +56,7 @@ class MyStory extends PureComponent {
               <li
                 className="wow slideInUp"
                 data-wow-duration="2s"
-                data-wow-offset="200"
+                data-wow-offset="100"
                 key={`${entry.company + index}`}>
                 <div className='content'>
                   <div className="time-title">
