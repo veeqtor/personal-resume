@@ -1,8 +1,9 @@
 #skills {
-  background: colors('dark');
-  color: colors('light');
+  background: colors("dark");
+  color: colors("light");
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 70vh;
   padding: $header-height;
 
@@ -19,7 +20,7 @@
   }
 
   .soft {
-    grid-column: 1/2;
+    // grid-column: 1/2;
   }
 
   .tech {
@@ -38,7 +39,7 @@
 
     span.bar {
       align-items: center;
-      background: colors('light');
+      background: colors("light");
       border-radius: 3px;
       color: colors("dark");
       display: flex;
